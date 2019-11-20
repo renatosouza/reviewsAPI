@@ -19,6 +19,9 @@ class Review(models.Model):
     submitted_at = models.DateTimeField(auto_now_add=True)
     company = models.CharField(max_length=50)
     reviewer = models.CharField(max_length=50)
+    owner = models.ForeignKey('auth.User', 
+                              related_name='snippets', 
+                              on_delete=models.CASCADE)
     
     class Meta:
         ordering = ['-submitted_at']
