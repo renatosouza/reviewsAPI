@@ -1,0 +1,128 @@
+[
+{
+    "model": "reviews.review",
+    "pk": 1,
+    "fields": {
+        "rating": 4,
+        "title": "Servi\u00e7o de internet",
+        "summary": "Muito boa a conex\u00e3o, apesar de ocorrer quedas \u00e0s vezes",
+        "ip_address": "78.66.98.78",
+        "submitted_at": "2019-11-21T19:59:57.416Z",
+        "company": "Infoweb",
+        "reviewer": "Renato Souza",
+        "owner": 1
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 2,
+    "fields": {
+        "rating": 5,
+        "title": "Qualidade de fone de ouvido",
+        "summary": "Fone de ouvido muito, qualidade de \u00e1udio \u00f3tima, sem defeitos",
+        "ip_address": "78.66.98.78",
+        "submitted_at": "2019-11-21T20:02:23.183Z",
+        "company": "JBL",
+        "reviewer": "Renato Souza",
+        "owner": 1
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 3,
+    "fields": {
+        "rating": 4,
+        "title": "Servi\u00e7o de streaming",
+        "summary": "Qualidade de streaming muito boa, mas cat\u00e1logo limitado",
+        "ip_address": "78.66.98.78",
+        "submitted_at": "2019-11-21T20:03:31.497Z",
+        "company": "Netflix",
+        "reviewer": "Renato Souza",
+        "owner": 1
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 4,
+    "fields": {
+        "rating": 1,
+        "title": "\u00daltima temporada de Game of thrones",
+        "summary": "Um lixo aquela porcaria, tem que fazer de novo",
+        "ip_address": "75.35.54.87",
+        "submitted_at": "2019-11-21T20:10:31.821Z",
+        "company": "HBO",
+        "reviewer": "Valeska Uchoa",
+        "owner": 2
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 5,
+    "fields": {
+        "rating": 5,
+        "title": "Qualquer zenfone",
+        "summary": "Melhor celular do mundo",
+        "ip_address": "75.35.54.87",
+        "submitted_at": "2019-11-21T20:11:22.053Z",
+        "company": "Asus",
+        "reviewer": "Valeska Uchoa",
+        "owner": 2
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 6,
+    "fields": {
+        "rating": 5,
+        "title": "Fleabag",
+        "summary": "Melhor s\u00e9rie do mundo, assistam",
+        "ip_address": "75.35.54.87",
+        "submitted_at": "2019-11-21T20:12:29.194Z",
+        "company": "BBC",
+        "reviewer": "Valeska Uchoa",
+        "owner": 2
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 7,
+    "fields": {
+        "rating": 5,
+        "title": "Qualidade da batata",
+        "summary": "Melhor batata do mercado",
+        "ip_address": "178.84.54.233",
+        "submitted_at": "2019-11-21T20:23:29.400Z",
+        "company": "Potatop",
+        "reviewer": "Felipe Saraiva",
+        "owner": 3
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 8,
+    "fields": {
+        "rating": 2,
+        "title": "Espa\u00e7o da livraria",
+        "summary": "S\u00f3 tem livro, fiquei incomodado, n\u00e3o gosto",
+        "ip_address": "178.84.54.233",
+        "submitted_at": "2019-11-21T20:25:46.454Z",
+        "company": "Livraria Livros",
+        "reviewer": "Felipe Saraiva",
+        "owner": 3
+    }
+},
+{
+    "model": "reviews.review",
+    "pk": 9,
+    "fields": {
+        "rating": 4,
+        "title": "Rod\u00edzios de carne em SP",
+        "summary": "Muito bom e barato, fui com o povo da empresa, mas ainda n\u00e3o \u00e9 melhor que o Fogo Campeiro",
+        "ip_address": "178.84.54.233",
+        "submitted_at": "2019-11-21T20:27:29.044Z",
+        "company": "Churrasco SP",
+        "reviewer": "Felipe Saraiva",
+        "owner": 3
+    }
+}
+]

@@ -12,6 +12,8 @@ class ReviewList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticated, IsOwner]
     
     def get_queryset(self):
+        if self.request.user.is_staff:
+            return Review.objects.all()    
         return Review.objects.filter(owner=self.request.user)
     
     def perform_create(self, serializer):
@@ -23,6 +25,8 @@ class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated, IsOwner]
     
     def get_queryset(self):
+        if self.request.user.is_staff:
+            return Review.objects.all()
         # maybe permission IsOwner unnecessary because of filter
         return Review.objects.filter(owner=self.request.user)
     
@@ -30,8 +34,12 @@ class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
 class UserList(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated, 
+                          permissions.IsAdminUser]
     
 
 class UserDetail(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [permissions.IsAuthenticated, 
+                          permissions.IsAdminUser]
