@@ -23,6 +23,7 @@ class ReviewDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticated, IsOwner]
     
     def get_queryset(self):
+        # maybe permission IsOwner unnecessary because of filter
         return Review.objects.filter(owner=self.request.user)
     
     
