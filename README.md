@@ -11,7 +11,7 @@ $ git clone git@github.com:renatosouza/reviewsAPI.git
 $ cd reviewsAPI
 ```
 
-Create a virtual environment to install dependencies in and activate it:
+Create a virtual environment (using python 3) to install dependencies in and activate it:
 
 ```sh
 $ virtualenv env
@@ -26,6 +26,7 @@ Then install the dependencies:
 
 Once `pip` has finished downloading the dependencies:
 ```sh
+(env)$ python manage.py migrate
 (env)$ python manage.py runserver
 ```
 Using the local host (`http://127.0.0.1:8000/`) you can access the API. The endpoints and the overall usage are available in the [API Documentation](https://documenter.getpostman.com/view/9384142/SW7c2n16).
@@ -53,7 +54,7 @@ username: admin
 password: superpassword
 ```
 
-Beyond that, it also loads 9 reviews (3 from each user) into the database.
+Beyond that, it also loads 9 reviews (3 from each common user) into the database.
 
 ## Tests
 
