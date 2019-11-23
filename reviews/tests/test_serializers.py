@@ -4,13 +4,12 @@ from reviews.serializers import ReviewSerializer
 from django.contrib.auth.models import User
 
 
-class ReviewSerializerTeste(TestCase):
+class ReviewSerializerTest(TestCase):
     """ Testing ReviewSerializer """
     
     def setUp(self):
-        self.user = User.objects.create_user(username="tester", 
-                                                password="1234")
-            
+        self.user = User.objects.create_user(username='tester', 
+                                                password='1234')
         self.review_attributes = {
             'rating': 5,
             'title': 'Awesome pizza',
@@ -33,6 +32,7 @@ class ReviewSerializerTeste(TestCase):
         self.review = Review.objects.create(**self.review_attributes)
         self.review_serializer = ReviewSerializer(instance=self.review)
             
+            
     def test_contain_expected_fields(self):
         data = self.review_serializer.data
         self.assertEqual(set(data.keys()), set(['id', 'rating', 'title', 
@@ -40,33 +40,41 @@ class ReviewSerializerTeste(TestCase):
                                                 'company', 'reviewer', 
                                                 'owner', 'submitted_at']))
             
+            
     def test_rating_field_content(self):
         data = self.review_serializer.data
         self.assertEqual(data['rating'], self.review_attributes['rating'])
+            
             
     def test_title_field_content(self):
         data = self.review_serializer.data
         self.assertEqual(data['title'], self.review_attributes['title'])
             
+            
     def test_summary_field_content(self):
         data = self.review_serializer.data    
         self.assertEqual(data['summary'], self.review_attributes['summary'])
+            
             
     def test_ip_address_field_content(self):
         data = self.review_serializer.data    
         self.assertEqual(data['ip_address'], self.review_attributes['ip_address'])
             
+            
     def test_company_field_content(self):
         data = self.review_serializer.data    
         self.assertEqual(data['company'], self.review_attributes['company'])
+            
             
     def test_reviewer_field_content(self):
         data = self.review_serializer.data
         self.assertEqual(data['reviewer'], self.review_attributes['reviewer'])
             
+            
     def test_owner_field_content(self):
         data = self.review_serializer.data    
         self.assertEqual(data['owner'], self.review_attributes['owner'].username)
+            
             
     def test_rating_out_choices(self):
         self.serializer_data['rating'] = 6
